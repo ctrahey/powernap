@@ -1,5 +1,5 @@
 <?php
-namespace Trahey\RestBundle\Annotations;
+namespace Trahey\PowerNapBundle\Annotations;
 
 /**
  * @Annotation

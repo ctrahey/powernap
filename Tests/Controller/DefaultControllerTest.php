@@ -1,6 +1,6 @@
 <?php
 
-namespace Trahey\RestBundle\Tests\Controller;
+namespace Trahey\PowerNapBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

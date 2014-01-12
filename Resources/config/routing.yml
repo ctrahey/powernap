@@ -1,20 +1,20 @@
 trahey_rest_main_annotations:
-    resource: "@TraheyRestBundle/Controller/RESTController.php"
+    resource: "@TraheyPowerNapBundle/Controller/RESTController.php"
     prefix:   /%trahey_rest.api_prefix%
     type: annotation
 trahey_rest_get_annotations:
-    resource: "@TraheyRestBundle/Controller/GETController.php"
+    resource: "@TraheyPowerNapBundle/Controller/GETController.php"
     prefix:   /%trahey_rest.api_prefix%
     type: annotation
 trahey_rest_post_annotations:
-    resource: "@TraheyRestBundle/Controller/POSTController.php"
+    resource: "@TraheyPowerNapBundle/Controller/POSTController.php"
     prefix:   /%trahey_rest.api_prefix%
     type: annotation
 trahey_rest_put_annotations:
-    resource: "@TraheyRestBundle/Controller/PUTController.php"
+    resource: "@TraheyPowerNapBundle/Controller/PUTController.php"
     prefix:   /%trahey_rest.api_prefix%
     type: annotation
 trahey_rest_delete_annotations:
-    resource: "@TraheyRestBundle/Controller/DELETEController.php"
+    resource: "@TraheyPowerNapBundle/Controller/DELETEController.php"
     prefix:   /%trahey_rest.api_prefix%
     type: annotation

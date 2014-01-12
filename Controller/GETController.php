@@ -1,5 +1,5 @@
 <?php
-namespace Trahey\RestBundle\Controller;
+namespace Trahey\PowerNapBundle\Controller;
 
 use Doctrine\Common\Collections\Collection;
 use Symfony\Component\EventDispatcher\EventDispatcher;

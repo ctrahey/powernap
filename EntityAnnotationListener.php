@@ -1,5 +1,5 @@
 <?php
-namespace Trahey\RestBundle;
+namespace Trahey\PowerNapBundle;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;

@@ -1,5 +1,5 @@
 <?php
-namespace Trahey\RestBundle\Controller;
+namespace Trahey\PowerNapBundle\Controller;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -13,10 +13,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Trahey\RestBundle\CRUDEvent;
+use Trahey\PowerNapBundle\CRUDEvent;
 use Doctrine\Bundle\DoctrineBundle\Registry;
-use Trahey\RestBundle\EntityAnnotationListener;
-use Trahey\RestBundle\IdentityResolver;
+use Trahey\PowerNapBundle\EntityAnnotationListener;
+use Trahey\PowerNapBundle\IdentityResolver;
 
 /**
  * @Route(service="trahey_rest.rest_controller")
@@ -48,7 +48,7 @@ class RESTController extends Controller
    */
   protected $identityResolver;
   /**
-   * @var \Trahey\RestBundle\EntityAnnotationListener
+   * @var \Trahey\PowerNapBundle\EntityAnnotationListener
    */
   protected $annotations;
 

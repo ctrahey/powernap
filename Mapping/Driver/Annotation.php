@@ -1,8 +1,8 @@
 <?php
 
-namespace Trahey\RestBundle\Mapping\Driver;
-use Trahey\RestBundle\Annotations\OwnerKeypath;
-use Trahey\RestBundle\Annotations\MutableRestProperty;
+namespace Trahey\PowerNapBundle\Mapping\Driver;
+use Trahey\PowerNapBundle\Annotations\OwnerKeypath;
+use Trahey\PowerNapBundle\Annotations\MutableRestProperty;
 use Gedmo\Mapping\Driver\AbstractAnnotationDriver,
   Doctrine\Common\Annotations\AnnotationReader,
   Gedmo\Exception\InvalidMappingException;

@@ -1,10 +1,10 @@
 parameters:
-    trahey_rest.entity_annotation_listener.class: Trahey\RestBundle\EntityAnnotationListener
-    trahey_rest.rest_controller.class: Trahey\RestBundle\Controller\RESTController
-    trahey_rest.get_controller.class: Trahey\RestBundle\Controller\GETController
-    trahey_rest.post_controller.class: Trahey\RestBundle\Controller\POSTController
-    trahey_rest.put_controller.class: Trahey\RestBundle\Controller\PUTController
-    trahey_rest.delete_controller.class: Trahey\RestBundle\Controller\DELETEController
+    trahey_rest.entity_annotation_listener.class: Trahey\PowerNapBundle\EntityAnnotationListener
+    trahey_rest.rest_controller.class: Trahey\PowerNapBundle\Controller\RESTController
+    trahey_rest.get_controller.class: Trahey\PowerNapBundle\Controller\GETController
+    trahey_rest.post_controller.class: Trahey\PowerNapBundle\Controller\POSTController
+    trahey_rest.put_controller.class: Trahey\PowerNapBundle\Controller\PUTController
+    trahey_rest.delete_controller.class: Trahey\PowerNapBundle\Controller\DELETEController
 services:
     ## REST Controllers
     trahey_rest.rest_controller:

@@ -1,5 +1,5 @@
 <?php
-namespace Trahey\RestBundle;
+namespace Trahey\PowerNapBundle;
 
 interface IdentityResolver {
     /**

@@ -1,5 +1,5 @@
 <?php
-namespace Trahey\RestBundle\Controller;
+namespace Trahey\PowerNapBundle\Controller;
 
 use Doctrine\Common\Collections\Collection;
 use Symfony\Component\EventDispatcher\EventDispatcher;
@@ -7,7 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Trahey\RestBundle\CRUDEvent;
+use Trahey\PowerNapBundle\CRUDEvent;
 /**
  * @Route(service="trahey_rest.post_controller")
  */
