@@ -1,0 +1,36 @@
+parameters:
+    trahey_rest.entity_annotation_listener.class: Trahey\RestBundle\EntityAnnotationListener
+    trahey_rest.rest_controller.class: Trahey\RestBundle\Controller\RESTController
+    trahey_rest.get_controller.class: Trahey\RestBundle\Controller\GETController
+    trahey_rest.post_controller.class: Trahey\RestBundle\Controller\POSTController
+    trahey_rest.put_controller.class: Trahey\RestBundle\Controller\PUTController
+    trahey_rest.delete_controller.class: Trahey\RestBundle\Controller\DELETEController
+services:
+    ## REST Controllers
+    trahey_rest.rest_controller:
+        class: %trahey_rest.rest_controller.class%
+        arguments: [%trahey_rest%, @doctrine, @event_dispatcher, @trahey_rest.entity_annotation_listener, @trahey_rest.identity_resolver]
+        scope: request
+    trahey_rest.get_controller:
+        class: %trahey_rest.get_controller.class%
+        arguments: [%trahey_rest%, @doctrine, @event_dispatcher, @trahey_rest.entity_annotation_listener, @trahey_rest.identity_resolver]
+        scope: request
+    trahey_rest.post_controller:
+        class: %trahey_rest.post_controller.class%
+        arguments: [%trahey_rest%, @doctrine, @event_dispatcher, @trahey_rest.entity_annotation_listener, @trahey_rest.identity_resolver]
+        scope: request
+    trahey_rest.put_controller:
+        class: %trahey_rest.put_controller.class%
+        arguments: [%trahey_rest%, @doctrine, @event_dispatcher, @trahey_rest.entity_annotation_listener, @trahey_rest.identity_resolver]
+        scope: request
+    trahey_rest.delete_controller:
+        class: %trahey_rest.delete_controller.class%
+        arguments: [%trahey_rest%, @doctrine, @event_dispatcher, @trahey_rest.entity_annotation_listener, @trahey_rest.identity_resolver]
+        scope: request
+
+    trahey_rest.entity_annotation_listener:
+        class: %trahey_rest.entity_annotation_listener.class%
+        tags:
+          - { name: doctrine.event_subscriber, connection: default }
+        calls:
+          - [ setAnnotationReader, [ @annotation_reader ] ]
