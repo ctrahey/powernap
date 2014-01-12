@@ -23,7 +23,7 @@
         "symfony/css-selector": "*",
         "symfony/process": "*",
         "doctrine/doctrine-bundle": "*",
-        "doctrine/orm": "*",
+        "doctrine/orm": "*"
     },
     "autoload": {
         "psr-0": { "Trahey\\PowerNapBundle": "" }
