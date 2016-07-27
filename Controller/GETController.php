@@ -68,7 +68,7 @@ class GETController extends RESTController
     }
     $view = $this->view($data, 200);
     $view->setFormat('json');
-    return $this->handleView($view);
+    return $view;
   }
 
   /**
