@@ -31,30 +31,31 @@ class Annotation extends AbstractAnnotationDriver
    * {@inheritDoc}
    */
   public function readExtendedMetadata($meta, array &$config) {
+    die("HERE!!!");
     $class = $this->getMetaReflectionClass($meta);
     // class annotations
 
-      if($accessSpec = $this->reader->getClassAnnotation($class, '\\Trahey\\RestBundle\\Annotations\\GrantReadAccessByEntityHasRelationToUser')) {
+      if($accessSpec = $this->reader->getClassAnnotation($class, '\\Trahey\\PowerNapBundle\\Annotations\\GrantReadAccessByEntityHasRelationToUser')) {
           $config['read_grants'][$accessSpec->userType] = array(
               'type' => 'entity_to_user',
               'keypath' => $accessSpec->keyPathOnEntityToUser
           );
       }
-      if($accessSpec = $this->reader->getClassAnnotation($class, '\\Trahey\\RestBundle\\Annotations\\GrantReadAccessByUserHasRelationToEntityOwner')) {
+      if($accessSpec = $this->reader->getClassAnnotation($class, '\\Trahey\\PowerNapBundle\\Annotations\\GrantReadAccessByUserHasRelationToEntityOwner')) {
           $config['read_grants'][$accessSpec->userType] = array(
               'type' => 'user_to_owner',
               'keypath' => $accessSpec->keyPathOnUserToEntityOwner
           );
       }
-      if($file_passthrough = $this->reader->getClassAnnotation($class, '\\Trahey\\RestBundle\\Annotations\\GETAsFilePassThrough')) {
+      if($file_passthrough = $this->reader->getClassAnnotation($class, '\\Trahey\\PowerNapBundle\\Annotations\\GETAsFilePassThrough')) {
           $config['file_passthrough_getter'] = $file_passthrough->fileGetter;
       }
-    if($ownerKeypath = $this->reader->getClassAnnotation($class, '\\Trahey\\RestBundle\\Annotations\\OwnerKeypath')) {
+    if($ownerKeypath = $this->reader->getClassAnnotation($class, '\\Trahey\\PowerNapBundle\\Annotations\\OwnerKeypath')) {
       $config['enforce_owner'] = true;
       $config['owner_keypath'] = $ownerKeypath->keypath;
       $config['owner_type'] = $ownerKeypath->userType;
     }
-    if($tokens = $this->reader->getClassAnnotation($class, '\\Trahey\\RestBundle\\Annotations\\URLTokens')) {
+    if($tokens = $this->reader->getClassAnnotation($class, '\\Trahey\\PowerNapBundle\\Annotations\\URLTokens')) {
       $config['singular'] = $tokens->singular;
       $config['plural'] = $tokens->plural;
     }
@@ -67,7 +68,7 @@ class Annotation extends AbstractAnnotationDriver
         continue;
       }
       // Mutable Rest Property
-      if ($annotation = $this->reader->getPropertyAnnotation($property, '\\Trahey\\RestBundle\\Annotations\\MutableRestProperty')) {
+      if ($annotation = $this->reader->getPropertyAnnotation($property, '\\Trahey\\PowerNapBundle\\Annotations\\MutableRestProperty')) {
         $propName = $this->derivePropertyName($property, $annotation);
         $config['properties'][$propName]['setter'] = $this->deriveSetterName($property, $annotation);
         $config['properties'][$propName]['getter'] = $this->deriveGetterName($property, $annotation);
