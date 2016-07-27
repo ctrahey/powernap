@@ -17,7 +17,7 @@
         "symfony/framework-bundle": "~2.1",
         "sensio/framework-extra-bundle": "^3.0.2",
         "friendsofsymfony/rest-bundle": "^2.0",
-        "gedmo/doctrine-extensions":      "dev-master"
+        "gedmo/doctrine-extensions":      ">=2.0"
     },
     "require-dev": {
         "symfony/yaml": "*",
