@@ -34,7 +34,7 @@ class GETController extends RESTController
     $this->request = $request;
     $config = $this->configForEntity($entity_type);
     $repo = $this->getDoctrine()->getRepository($config['class']);
-    if($config['enforce_owner']) {
+    if(array_key_exists('enforce_owner', $config) && $config['enforce_owner']) {
       $curUserType = $this->getCurrentUserType();
       $curUser = $this->getCurrentUser();
         $query = $repo->createQueryBuilder('e');
@@ -68,7 +68,7 @@ class GETController extends RESTController
     }
     $view = $this->view($data, 200);
     $view->setFormat('json');
-    return $view;
+    return $this->handleView($view);
   }
 
   /**

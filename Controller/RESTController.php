@@ -4,7 +4,7 @@ namespace Trahey\PowerNapBundle\Controller;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use FOS\RestBundle\Controller\FOSRestController as Controller;
-use Symfony\Component\EventDispatcher\EventDispatcher;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\ParameterBag;
@@ -52,7 +52,7 @@ class RESTController extends Controller
    */
   protected $annotations;
 
-  public function __construct($config = array(), Registry $doctrine, EventDispatcher $eventDispatcher, EntityAnnotationListener $annotations, IdentityResolver $resolver = NULL) {
+  public function __construct($config = array(), Registry $doctrine, EventDispatcherInterface $eventDispatcher, EntityAnnotationListener $annotations, IdentityResolver $resolver = NULL) {
     $this->_config = $config;
     $this->doctrine = $doctrine;
     $this->eventDispatcher = $eventDispatcher;
